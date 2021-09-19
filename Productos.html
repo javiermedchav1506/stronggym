@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+	<link href="css/cssproductos.css" rel="stylesheet" type="text/css">
+	
+	<script lenguage=Javascript>
+       function ver_imagen()
+        {
+            if (!document.images)
+            return
+            document.images.img.src=
+                document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex].value;
+        }
+    
+		
+        function ver_hora()
+        {
+            var miHora = new Date();
+            var horas = miHora.getHours().toString();
+            var minutos = miHora.getMinutes().toString();
+            if(minutos.length == 1) minutos = "0" + minutos;
+            var segundos = miHora.getSeconds().toString();
+            if(segundos.length == 1) segundos = "0" + segundos;
+            
+            document.forms[1].mireloj.value = horas + " : " + minutos + " : " + segundos;
+        }
+        
+    </script>
+	
+<h1>Productos</h1>	
+	
+<body>
+	
+	
+	
+	<div class="menuprincipal">
+	
+     <nav>
+        <div class="nav-movil">
+            <a id="nav-boton" href="#!">
+            <span></span>
+            </a>
+            </div>
+            <ul class="nav-menu">
+               <li><a href="index principal.html">Inicio</a></li>
+                <li><a href="Suscripción.html">Suscripción</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+				<li><a href="Nosotros.html">Nosotros</a></li>
+				<li><a href="Tips.html">Tips</a></li>
+                
+            </ul>
+        </nav>
+        </br>
+ </div>
+	
+<div class="texto1">
+	<p>
+	
+	Tambien contamos con gran variadad de productos desde ropa deportiva como playeras, gorras  con estampados increibles y por su puesto suplementos que te ayudaran a generar mas masa muscular y crecer mucho mas rapido.
+	</p>
+	
+	</div>
+
+
+
+
+	 <div class="Galeria">
+        <form name="imagenes">
+        
+        <select name="imagen" size="1" onChange="ver_imagen()">
+            <option>Elige una imagen:</option>
+            <option value="imagenes/foto7.jpg">1</option>
+            <option value="imagenes/foto8.png">2</option>
+            <option value="imagenes/foto9.jpg">3</option>
+			<option value="imagenes/foto13.jpg">4</option>
+            <option value="imagenes/foto14.jpg">5</option>
+            <option value="imagenes/foto15.jpg">6</option>
+			<option value="imagenes/foto16.jpg">7</option>
+            <option value="imagenes/foto17.jpg">8</option>
+            <option value="imagenes/foto18.jpg">9</option>
+            </select>
+        </form>
+        <img src="imagenes/foto9.jpg" name="img"></img>
+    
+    </div>
+    
+    </br>
+    
+<div class="reloj">
+        <form>
+        <p>
+            <input type="text" size="20" name="mireloj">
+            </p>
+        
+        </form>
+        
+    <script>
+    var r = setInterval ("ver_hora()", 500);
+        
+        
+        </script>
+    </div>
+    
+   
+
+<div class="banner">
+<a href="https://tiendadesuplementos.com.mx/?gclid=Cj0KCQjws4aKBhDPARIsAIWH0JUSCySaT0f2k9JLJ3yLjS5sw-sGkZ-yUi0wQ7OJONljh44kDUetCxEaAh7NEALw_wcB" onClick="confirmarMensaje()"> <img class="banner3" src="imagenes/banner4.jpg"></a></img></a>
+</body>
+    
+
+
+
+
+</body>
+</html>
